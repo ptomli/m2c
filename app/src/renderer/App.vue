@@ -1,13 +1,34 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <md-layout id="app" md-column md-gutter>
+    <md-layout md-flex="35">
+      <persistent-view></persistent-view>
+    </md-layout>
+    <md-layout>
+      <transition name="component-fade" mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </md-layout>
+    <md-bottom-bar>
+      <md-bottom-bar-item md-icon="home" href="#/">Home</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="folder" href="#/files">Files</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="settings" href="#/settings">Settings</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="gesture" href="#/conversational">Conversational</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="get_app" href="#/probe">Probe</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="equalizer" href="#/offsets">Offsets</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="my_location" href="#/status">Status</md-bottom-bar-item>
+    </md-bottom-bar>
+  </md-layout>
 </template>
 
 <script>
   import store from 'renderer/vuex/store'
+  import PersistentView from './components/PersistentView.vue'
+
   export default {
-    store
+    store,
+    components: {
+      PersistentView
+    }
   }
 </script>
 
@@ -38,5 +59,16 @@
     font-family: Lato, Helvetica, sans-serif;
     justify-content: center;
     text-align: center;
+  }
+  #app {
+    width: 100%;
+    height: 100%;
+  }
+
+  .component-fade-enter-active, .component-fade-leave-active {
+    transition: opacity 50ms ease;
+  }
+  .component-fade-enter, .component-fade-leave-to {
+    opacity: 0.1;
   }
 </style>
