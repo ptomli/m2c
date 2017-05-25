@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.css'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
 import Electron from 'vue-electron'
 import Resource from 'vue-resource'
 import Router from 'vue-router'
@@ -8,7 +8,7 @@ import Router from 'vue-router'
 import App from './App'
 import routes from './routes'
 
-Vue.use(VueMaterial)
+Vue.use(Vuetify)
 Vue.use(Electron)
 Vue.use(Resource)
 Vue.use(Router)

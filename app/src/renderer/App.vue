@@ -1,23 +1,48 @@
 <template>
-  <md-layout id="app" md-column md-gutter>
-    <md-layout md-flex="35">
-      <persistent-view></persistent-view>
-    </md-layout>
-    <md-layout>
-      <transition name="component-fade" mode="out-in">
-        <router-view></router-view>
-      </transition>
-    </md-layout>
-    <md-bottom-bar>
-      <md-bottom-bar-item md-icon="home" href="#/">Home</md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="folder" href="#/files">Files</md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="settings" href="#/settings">Settings</md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="gesture" href="#/conversational">Conversational</md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="get_app" href="#/probe">Probe</md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="equalizer" href="#/offsets">Offsets</md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="my_location" href="#/status">Status</md-bottom-bar-item>
-    </md-bottom-bar>
-  </md-layout>
+  <v-app id="app">
+
+    <v-container fluid style="padding-top: 10px;">
+      <v-layout row class="elevation-4 mb-2" style="min-height: 440px;">
+        <v-flex md12>
+          <transition name="component-fade" mode="out-in">
+            <router-view></router-view>
+          </transition>
+        </v-flex>
+      </v-layout>
+          <persistent-view></persistent-view>
+    </v-container>
+
+    <v-bottom-nav value="true" class="transparent" style="top: 0; bottom: initial;">
+      <v-btn flat router to="home">
+        <span>Home</span>
+        <v-icon>home</v-icon>
+      </v-btn>
+      <v-btn flat router to="files">
+        <span>Files</span>
+        <v-icon>folder</v-icon>
+      </v-btn>
+      <v-btn flat router to="settings">
+        <span>Settings</span>
+        <v-icon>settings</v-icon>
+      </v-btn>
+      <v-btn flat router to="conversational">
+        <span>Conversational</span>
+        <v-icon>gesture</v-icon>
+      </v-btn>
+      <v-btn flat router to="probe">
+        <span>Probe</span>
+        <v-icon>get_app</v-icon>
+      </v-btn>
+      <v-btn flat router to="offsets">
+        <span>Offsets</span>
+        <v-icon>equalizer</v-icon>
+      </v-btn>
+      <v-btn flat router to="status">
+        <span>Status</span>
+        <v-icon>my_location</v-icon>
+      </v-btn>
+    </v-bottom-nav>
+  </v-app>
 </template>
 
 <script>
@@ -43,6 +68,8 @@
     padding: 0;
   }
 
+  html { overflow-y: hidden; }
+
   html,
   body { height: 100%; }
 
@@ -60,13 +87,15 @@
     justify-content: center;
     text-align: center;
   }
+
   #app {
     width: 100%;
     height: 100%;
+    padding-top: 60px;
   }
 
   .component-fade-enter-active, .component-fade-leave-active {
-    transition: opacity 50ms ease;
+    transition: opacity 75ms ease;
   }
   .component-fade-enter, .component-fade-leave-to {
     opacity: 0.1;
