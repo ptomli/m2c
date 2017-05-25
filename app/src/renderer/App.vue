@@ -1,7 +1,7 @@
 <template>
   <v-app id="app">
 
-    <v-container fluid style="padding-top: 10px;">
+    <v-container fluid class="pt-1">
       <v-layout row class="elevation-4 mb-2" style="min-height: 440px;">
         <v-flex md12>
           <transition name="component-fade" mode="out-in">
@@ -9,10 +9,10 @@
           </transition>
         </v-flex>
       </v-layout>
-          <persistent-view></persistent-view>
+      <persistent-view></persistent-view>
     </v-container>
 
-    <v-bottom-nav value="true" class="transparent" style="top: 0; bottom: initial;">
+    <v-bottom-nav value="true" class="transparent elevation-3" style="top: 0; bottom: initial;">
       <v-btn flat router to="home">
         <span>Home</span>
         <v-icon>home</v-icon>
