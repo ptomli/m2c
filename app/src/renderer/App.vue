@@ -58,9 +58,6 @@
 </script>
 
 <style>
-  @import url(https://fonts.googleapis.com/css?family=Lato:300);
-  @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic);
-  @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
   @import url(/fonts/stylesheet.css);
 
   * {
@@ -83,7 +80,7 @@
       );
     background-position: center;
     display: flex;
-    font-family: Lato, Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
     justify-content: center;
     text-align: center;
   }

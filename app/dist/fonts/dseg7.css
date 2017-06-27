@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'DSEG7 Classic Mini';
+  src: url('DSEG7ClassicMini-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DSEG7 Classic Mini';
+  src: url('DSEG7ClassicMini-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DSEG7 Classic Mini';
+  src: url('DSEG7ClassicMini-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DSEG7 Classic Mini';
+  src: url('DSEG7ClassicMini-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DSEG7 Classic Mini';
+  src: url('DSEG7ClassicMini-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DSEG7 Classic Mini';
+  src: url('DSEG7ClassicMini-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
